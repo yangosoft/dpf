@@ -1,5 +1,3 @@
-
-
 #include "dpf.hpp"
 
 Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_SLK, TFT_RST, TFT_MISO);
@@ -13,11 +11,11 @@ byte INTEMP, CACT, SPEED;
 float BATTERY, turboPRESS, turboMAX;
 
 unsigned long time_now2 = 0;
-unsigned long period2 = 10000; //10sn
+unsigned long period2 = 10000; 
 unsigned long time_now5 = 0;
-unsigned long period5 = 30000; //120000 2dk
-unsigned long delayTime = 0;   //50 çalışıyor
-//const int buttonPin = D6;
+unsigned long period5 = 30000; 
+unsigned long delayTime = 0;   
+
 uint16_t SMC;
 uint32_t km;
 uint8_t percentFap;
@@ -26,7 +24,7 @@ char iBuf[16] = {};
 char eBuf[16] = {};
 char cBuf[16] = {};
 char oBuf[16] = {};
-char ldrBuf[5] = {};
+
 
 BluetoothSerial SerialBT;
 
@@ -285,13 +283,7 @@ void initODB()
 void drawScreen(bool half)
 {
   static int randomColor = 0;
-  /*if(half == false)
-  {
-    tft.fillScreen(ILI9341_BLACK);
-  }else
-  {
-    //tft.fillRect(0,0,tft.width(),tft.height()/2,ILI9341_BLACK);
-  }*/
+ 
 
   tft.setCursor(10, 10);
   tft.setTextColor(ILI9341_RED, ILI9341_BLACK);
@@ -572,7 +564,6 @@ int getSpeed()
   delay(delayTime);
   readOBD();
   speed = strtol(&rxData[6], 0, 16);
-
   return speed;
 }
 
@@ -597,21 +588,8 @@ int getBarometricPressure()
 void getTurboPressure()
 {
   turboRAW = (getIntakePressure() - getBarometricPressure());
-
   turboPRESS = turboRAW;
   turboPRESS = (turboPRESS * 0.01);
-  //graphTURBO();
-  /*if (turboRAW < 139) {
-    tft.setTextColor(ILI9341_GREEN, ILI9341_BLACK);
-  }
-  else {
-    tft.setTextColor(ILI9341_RED, ILI9341_BLACK);
-  }
-
-
-  if (turboPRESS > turboMAX) {
-    (turboMAX = turboPRESS);
-  }*/
 }
 
 void readOBD()
