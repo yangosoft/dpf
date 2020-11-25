@@ -1,10 +1,15 @@
 # Diesel Filter Particle viewer
 
+Needed parts:
  - ESP32 NodeMCU ESP-32s
  - TFT Screen based on ILI9341
  - ELM327
 
-Only tested with some VAG CAGA engine
+
+- [PCB](schema/dpf1) designed with EAGLE.
+- [Box to 3d print](schema/3dmodel) designed with FreeCAD.
+
+Only tested in a Volkswagen 2.0 TDI CAGA engine
 
 
 
