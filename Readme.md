@@ -1,16 +1,35 @@
 # Diesel Filter Particle viewer
 
-Needed parts:
+Only tested in a Volkswagen 2.0 TDI CAGA engine.
+
+The code is mostly based on https://github.com/fkoca5055/obdESP with some changes to check DFP status, provide a WiFi Access Point to change Bluetooth device, PIN, debug viewer...
+
+## Needed parts
+
  - ESP32 NodeMCU ESP-32s
  - TFT Screen based on ILI9341
  - ELM327
 
+## Box and schema
 
-- [PCB](schema/dpf1) designed with EAGLE.
-- [Box to 3d print](schema/3dmodel) designed with FreeCAD.
+ - [PCB](schema/dpf1) designed with EAGLE.
+ - [Box to 3d print](schema/3dmodel) designed with FreeCAD.
+ 
+ 
+## Pinout
 
-Only tested in a Volkswagen 2.0 TDI CAGA engine
 
+|  TFT |   ESP32 GPIO |
+|---|---|
+| TFT_CS | 15 |
+| TFT_DC | 4 |
+| TFT_MOSI | 23 |
+| TFT_SLK | 18 |
+| TFT_RST | 2 |
+| TFT_LED | -1 |
+| TFT_MISO | 19 |
+
+Please change `TFT_RST` to another GPIO since this the integrated led in `NodeMCU ESP-32s`.
 
 
 # Useful links

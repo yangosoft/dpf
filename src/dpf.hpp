@@ -1,3 +1,5 @@
+#define VERSION "0.1.0"
+
 #include <Arduino.h>
 #include <Wire.h>
 
@@ -47,17 +49,12 @@ const int TFT_SLK = 18;
 const int TFT_RST = 2;
 const int TFT_LED = -1;   
 const int TFT_MISO = 19;   
-#define CYAN     0x07FF
-#define MAGENTA  0xF81F
 
-#define LED 6
-
-#define VERSION "0.1.0"
 
 const int READ_BUFFER_SIZE = 128;
 
 const char *ssid = "DPFSCREEN";
-const char *password = "JohnSilverIsGold";
+const char *password = "CHANGE_ME_PLEASE";
 
 static const char* PARAM_INPUT_1 = "fname";
 static const char* PARAM_INPUT_2 = "lname";
