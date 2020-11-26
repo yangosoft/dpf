@@ -31,6 +31,9 @@ The code is mostly based on https://github.com/fkoca5055/obdESP with some change
 
 Please change `TFT_RST` to another GPIO since this the integrated led in `NodeMCU ESP-32s`.
 
+# Next steps
+
+Remove the screen and make use of the FIS to display DFP information
 
 # Useful links
 
@@ -49,3 +52,4 @@ Please change `TFT_RST` to another GPIO since this the integrated led in `NodeMC
 - https://www.fte.com/WebHelpII/Sodera/Content/Documentation/WhitePapers/BPA600/Encryption/GettingAndroidLinkKey/RetrievingHCIlog.htm
 - https://stackoverflow.com/questions/23877761/sniffing-logging-your-own-android-bluetooth-traffic
 - https://github.com/fkoca5055/obdESP
+- https://github.com/ibanezgomez/FISBlocks
