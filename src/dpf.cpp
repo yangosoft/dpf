@@ -332,6 +332,7 @@ void drawScreen(bool half)
     return;
   }
 
+  /* Not supported :(
   tft.setCursor(10, 130);
   tft.setTextSize(2);
   tft.print("ACEITE");
@@ -493,8 +494,7 @@ void getSMC()
   delay(200);
   readOBD();
 
-  //int SMC = ((strtol(&rxData[9], 0, 16) * 256) + strtol(&rxData[12], 0, 16)); //((A*256)+B)/100
-  SMC = strtol(&rxData[10], 0, 16);
+   SMC = ((strtol(&rxData[9], 0, 16) * 256) + strtol(&rxData[12], 0, 16)); //((A*256)+B)/100
 
   //SerialBT.println(SMC);
 
@@ -502,10 +502,7 @@ void getSMC()
   SEND_BLE("221156\r");
   delay(200);
   readOBD();
-  char buffer2[9];
-  memcpy(buffer2, &rxData[11], 8);
-  buffer2[8] = '\0';
-  km = strtol(buffer2, 0, 16);
+  km = (strtol(&rxData[9], 0, 16) << 24) + (strtol(&rxData[12], 0, 16) << 16 ) +  (strtol(&rxData[15], 0, 16) << 8) + strtol(&rxData[18], 0, 16); 
   Serial.print("\nKM: ");
   SerialBT.println(km);
   km = km / 1000;
@@ -515,10 +512,8 @@ void getSMC()
   delay(200);
   readOBD();
 
-  memcpy(buffer2, &rxData[11], 2);
-  buffer2[2] = '\0';
-  buffer2[3] = '\0';
-  percentFap = strtol(buffer2, 0, 16);
+
+  percentFap = strtol(&rxData[9], 0, 16);
 }
 
 void getEGT()
@@ -578,11 +573,13 @@ int getIntakePressure()
 
 int getBarometricPressure()
 {
+  /*Not supported
   SerialBT.flush();
   SEND_BLE("0133\r");
   delay(delayTime);
   readOBD();
-  return strtol(&rxData[6], 0, 16);
+  return strtol(&rxData[6], 0, 16);*/
+  return 1; //Approx 1atm ~ 1bar
 }
 
 void getTurboPressure()
