@@ -340,7 +340,7 @@ void drawScreen(bool half)
   tft.setCursor(10, 150);
   snprintf(oBuf, sizeof(oBuf), "%03d", oilTemp);
   tft.print(oBuf);
-  tft.println("c");
+  tft.println("c");*/
 
   tft.setCursor(160, 130);
   tft.setTextSize(2);
