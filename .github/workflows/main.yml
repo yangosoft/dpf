@@ -29,4 +29,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
-          platformio run -d .
+          /home/runner/.platformio/penv/bin/platformio run 
