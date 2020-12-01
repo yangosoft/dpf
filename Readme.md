@@ -4,11 +4,13 @@ Only tested in a Volkswagen 2.0 TDI CAGA engine.
 
 The code is mostly based on https://github.com/fkoca5055/obdESP with some changes to check DFP status, provide a WiFi Access Point to change Bluetooth device, PIN, debug viewer...
 
+Please note: as I'm not having so much time to spend on this project the code is quick and dirty.
+
 ## Needed parts
 
  - ESP32 NodeMCU ESP-32s
  - TFT Screen based on ILI9341
- - ELM327
+ - ELM327 Bluetooth
 
 ## Box and schema
 
@@ -19,6 +21,9 @@ The code is mostly based on https://github.com/fkoca5055/obdESP with some change
 ![Prototype1](https://github.com/yangosoft/dpf/blob/master/doc/prototype1.jpg?raw=yes)
 ![Prototype2](https://github.com/yangosoft/dpf/blob/master/doc/prototype2.jpg?raw=yes)
 ![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/prototype3.jpg?raw=yes)
+![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb1.jpg?raw=yes)
+![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb2.jpg?raw=yes)
+![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb3.jpg?raw=yes)
  
  
 ## Pinout
