@@ -24,6 +24,8 @@ Please note: as I'm not having so much time to spend on this project the code is
 ![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb1.jpg?raw=yes)
 ![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb2.jpg?raw=yes)
 ![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb3.jpg?raw=yes)
+![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb4.jpg?raw=yes)
+![Prototype3](https://github.com/yangosoft/dpf/blob/master/doc/pcb5.jpg?raw=yes)
  
  
 ## Pinout
